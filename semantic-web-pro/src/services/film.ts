@@ -65,3 +65,9 @@ WHERE {
     }
     return null
 }
+
+export async function queryData(query: string) {
+  const data = await request({url: '/data', method: 'post', params: {query: query}})
+  if (data) return data
+  return {}
+}
