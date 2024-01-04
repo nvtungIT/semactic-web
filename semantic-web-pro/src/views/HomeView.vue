@@ -16,9 +16,8 @@
                                       <h1>{{ film.title.value }}</h1>
                                       <div class="margin"></div>
                                       <p><a id="yellow">ReleaseDate: </a><a>{{ film.releaseDate.value }}</a></p>
-                                      <p><a id="yellow">Director: </a><a>{{ film.director.value }}</a></p>
-                                      <p><a id="yellow">point: </a><a>10/6,7</a></p>
-                                      <p class="trailer"><a href=""><img width="12px" src="https://i.hizliresim.com/bLV9Bj.png"> View trailer on YouTube</a></p>
+                                      <p><a id="yellow">Director: </a><a>{{ film.directorName.value }}</a></p>
+                                      <p><a id="yellow">Genres: </a><a>{{ film.genresName.value }}</a></p>
                                       <div class="buton"><p><a :href="film.title.value">VİEW DETAİL</a></p></div>
                                   </div>
                               </div>

@@ -10,7 +10,7 @@ const REQUEST_HEADER = {
   'Content-Type': HEADER_CONTENT_TYPE,
 };
 const service = axios.create({
-  baseURL: 'http://localhost:3030/',
+  baseURL: 'http://localhost:3030/Movie',
   withCredentials: WITH_CREDENTIALS,
   headers: REQUEST_HEADER,
 });

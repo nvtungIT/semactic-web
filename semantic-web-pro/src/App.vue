@@ -1,5 +1,4 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="screen">
@@ -11,8 +10,8 @@
 .screen {
   height: 100vh;
   width: 100vw;
+  color: #000;
 }
 @media (min-width: 1024px) {
-
 }
 </style>
