@@ -6,10 +6,11 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?movie ?title ?releaseDate ?budget ?runtime ?productionCompanies ?director ?genres ?cast ?character
+SELECT ?movie ?image ?title ?releaseDate ?budget ?runtime ?productionCompanies ?director ?genres ?cast ?character
 WHERE {
   ?movie rdf:type ex:Movie;
     ex:title ?title;
+    ex:image ?image;
     ex:release_date ?releaseDate;
     ex:budget ?budget;
     ex:runtime ?runtime;
@@ -39,10 +40,11 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?movie ?title ?releaseDate ?budget ?runtime ?productionCompanies ?director ?genres ?cast ?character
+SELECT ?movie ?image ?title ?releaseDate ?budget ?runtime ?productionCompanies ?director ?genres ?cast ?character
 WHERE {
   ?movie rdf:type ex:Movie;
     ex:title ?title;
+    ex:image ?image;
     ex:release_date ?releaseDate;
     ex:budget ?budget;
     ex:runtime ?runtime;

@@ -22,7 +22,7 @@
                                       <div class="buton"><p><a :href="film.title.value">VİEW DETAİL</a></p></div>
                                   </div>
                               </div>
-                              <img src="https://i.hizliresim.com/QpLyVg.png"/>
+                              <img alt="Ảnh film" :src="film.image && film.image.value  ? film.image.value: ''" class="image-film"/>
                           </div>
                   </div>
               </div>

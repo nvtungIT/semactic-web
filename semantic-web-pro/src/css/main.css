@@ -53,7 +53,11 @@ body {
     /* Safari */
     transition: opacity 1s, transform 2s;
 }
-
+.slider .item  .image-film {
+    width: 100%;
+    height: 400px;
+    background-color: #c5bcbc;
+}
 .slider .item .information .text {
     width: 200px;
     margin: auto;

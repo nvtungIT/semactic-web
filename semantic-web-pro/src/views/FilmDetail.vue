@@ -3,7 +3,7 @@
   
         <div class="popular-movie-slider">
       
-          <img src="https://i.hizliresim.com/QpLyVg.png" class="poster">
+          <img  :src="data.image && data.image.value? data.image.value: ''" class="poster">
       
           <div class="popular-movie-slider-content">
             <p class="release">{{ data.releaseDate.value }}</p>
