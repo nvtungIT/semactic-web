@@ -1,13 +1,12 @@
-export interface Film {
-  title: Data
-  releaseDate: Data
-  budget: Data
+export interface Product {
+  productName: Data
+  harvestSeason: Data
+  cropType: Data
   runtime: Data
-  producttionCompanies: Data
-  directorName: Data
-  genres: Data
-  case: Data
-  character: Data
+  price: Data
+  location: Data
+  quantity: Data
+  ProductImage: Data
 }
 export interface Data {
   type: string

@@ -10,7 +10,7 @@
 .screen {
   height: 100vh;
   width: 100vw;
-  color: #000;
+  color: #f0f0f0;
 }
 @media (min-width: 1024px) {
 }
