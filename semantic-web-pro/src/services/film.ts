@@ -1,7 +1,7 @@
 import type { Film } from '@/models'
 import request from '../utils/request'
-export async function getFilms(): Film[] {
-  var query = `PREFIX ex: <http://example.org/ontology#>
+export async function getFilms(): Promise<Film[]> {
+  const query = `PREFIX ex: <http://example.org/ontology#>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -37,7 +37,7 @@ export async function getFilms(): Film[] {
 }
 
 export async function getDetailFilm(name: string): Film {
-  var query = `PREFIX ex: <http://example.org/ontology#>
+  const query = `PREFIX ex: <http://example.org/ontology#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>

@@ -1,57 +1,57 @@
-import axios from 'axios';
-import { getAccessToken, removeAccessToken } from './cookies';
-import router from '@/router';
+import axios from 'axios'
+import { getAccessToken, removeAccessToken } from './cookies'
+import router from '@/router'
 
-const HEADER_ACCEPT = 'application/json';
-const HEADER_CONTENT_TYPE = 'application/json';
-const WITH_CREDENTIALS = false;
+const HEADER_ACCEPT = 'application/json'
+const HEADER_CONTENT_TYPE = 'application/json'
+const WITH_CREDENTIALS = false
 const REQUEST_HEADER = {
   Accept: HEADER_ACCEPT,
-  'Content-Type': HEADER_CONTENT_TYPE,
-};
+  'Content-Type': HEADER_CONTENT_TYPE
+}
 const service = axios.create({
-  baseURL: 'http://localhost:3030/Movie',
+  baseURL: 'http://localhost:3030/farm',
   withCredentials: WITH_CREDENTIALS,
-  headers: REQUEST_HEADER,
-});
+  headers: REQUEST_HEADER
+})
 service.interceptors.request.use(
   (config) => {
-    const token = getAccessToken();
+    const token = getAccessToken()
     if (token) {
-      config.headers['Authorization'] = 'Bearer ' + token;
+      config.headers['Authorization'] = 'Bearer ' + token
     }
-    return config;
+    return config
   },
   (error) => {
-    return Promise.reject(error);
+    return Promise.reject(error)
   }
-);
+)
 service.interceptors.response.use(
   (response) => {
     if (response.status) {
-      response.data.statusCode = response.status;
+      response.data.statusCode = response.status
     }
-    return response.data;
+    return response.data
   },
   (error) => {
     if (error.response.status == 401) {
-      removeAccessToken();
-      router.push({ name: 'login' });
+      removeAccessToken()
+      router.push({ name: 'login' })
     }
     if (error.response.status === 500) {
       router.push({
         name: 'Error',
         params: {
-          pathMatch: 403,
-        },
-      });
+          pathMatch: 403
+        }
+      })
     }
-    let message = error.message;
+    let message = error.message
     if (error.response.data) {
-      message = error.response.data.message || 'Lỗi';
+      message = error.response.data.message || 'Lỗi'
     }
-    console.log(message);
-    return Promise.reject(error);
+    console.log(message)
+    return Promise.reject(error)
   }
-);
-export default service;
+)
+export default service
