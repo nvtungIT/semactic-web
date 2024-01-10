@@ -16,21 +16,20 @@
                                   <div class="text">
                                       <h1>{{ product.productName.value }}</h1>
                                       <div class="margin"></div>
-                                      <!-- <p><a id="yellow">ReleaseDate: </a><a>{{ film.releaseDate.value }}</a></p>
-                                      <p><a id="yellow">Director: </a><a>{{ film.directorName.value }}</a></p>
-                                      <p><a id="yellow">Genres: </a><a>{{ film.genresName.value }}</a></p> -->
+                                      <p><a id="yellow">Loại nông sản: </a><a>{{ product.cropType.value }}</a></p>
+                                      <p><a id="yellow">Nơi trồng: </a><a>{{  product.location.value  }}</a></p>
                                       <div class="buton"><p><a :href="product.productName.value">Xem chi tiết </a></p></div>
-                                      
+
                                   </div>
                               </div>
-                              <img alt="Ảnh film" :src="product.ProductImage.value" class="image-film"/>
+                              <img alt="Ảnh giống cây" :src="product.ProductImage.value" class="image-film"/>
                           </div>
                   </div>
               </div>
           </div>
       </div>
       <footer class="footer">
-      <p>&copy; 2024 Các loại nông sản</p>
+      <p>&copy; 2024 Các loại nông sản - Nhóm 7 Sematic Web</p>
     </footer>
   </main>
 </template>
