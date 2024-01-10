@@ -3,7 +3,7 @@
 
         <div class="popular-movie-slider">
 
-            <img src="https://i.hizliresim.com/QpLyVg.png" class="poster">
+            <img src="https://vietnamwaterportal.com/storage/eb/articles/618/b2ap3_large_Agricultural-Sector-in-Vietnam.png" class="poster">
 
             <div class="popular-movie-slider-content">
                 <p class="release">{{ data.releaseDate.value }}</p>
@@ -38,15 +38,15 @@
 </template>
 <script lang="ts">
 import { ref } from 'vue'
-import { getDetailFilm } from '../services/film'
+import { getDetailProduct } from '../services/film'
 export default {
     async created() {
-        const nameFilm = this.$route.params.name
-        if (nameFilm) {
-            this.data = await getDetailFilm(nameFilm)
+        const nameProduct = this.$route.params.name
+        if (nameProduct) {
+            this.data = await getDetailProduct(nameProduct)
         }
     },
-    setup(props, ctx) {
+    setup() {
         const data = ref(null)
         return {
             data
